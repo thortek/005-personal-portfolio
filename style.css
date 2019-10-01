@@ -1,3 +1,9 @@
+/* Custom properties/variables  */
+:root {
+    --seahawk-blue: #0a2241;
+    --seahawk-green: #98df4a;
+  }
+
 * {
     margin: 0px;
 }
@@ -7,41 +13,73 @@
     justify-content: flex-end;
     align-items: center;
     position: fixed;
-    background-color: #475d38;
+    background-color: var(--seahawk-green);
     width: 100%;
-    height: 60px;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
 }
 
 .navlist {
     display: flex;
-    justify-content: space-around;
-    width: 300px;
+    margin-right: 1rem;
+}
+
+.navlist a {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 .navlist a:hover {
-    background: #07d16c;
+    background-color: #07d16c;
   }
 
 li {
     list-style: none;
-    color: #fff;
+    color: var(--seahawk-blue);
     font-size: 2rem;
 }
 
 a {
     text-decoration: none;
-    color: #f0f0f0;
   }
 
 #welcome-section {
     width: 100%;
     height: 100vh;
-    background-color: cornflowerblue;
+    background-color: var(--seahawk-blue);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+
+  /* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
   }
